@@ -22,6 +22,8 @@ public class Calculator {
         switch (operation) {
             case "+":
                 return (float) (arg1 + arg2);
+            case "-":
+                return (float) (arg1 - arg2);
             default:
                 throw new UnsupportedOperationException("Не корректная операция, Введите +,-,/,*");
         }
