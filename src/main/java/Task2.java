@@ -64,6 +64,7 @@ public class Task2 {
                 maxlength = i;
             }
         }
+        System.out.println("Самое длинное слово " + words[maxlength]);
         sc.close();
         return maxlength;
     }
