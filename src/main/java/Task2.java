@@ -15,6 +15,7 @@ public class Task2 {
         } else {
             System.out.println("Ошибка в запросе");
         }
+        num.close();
     }
 
     public static int calculate() {
@@ -27,8 +28,11 @@ public class Task2 {
         System.out.print("Введите операцию: ");
         String operation = sc.nextLine();
         System.out.printf(String.format("Итого " + "%.4f%n", calculation(arg1, arg2, operation)));
+        in.close();
+        sc.close();
         return 0;
     }
+
 
     public static float calculation(float arg1, float arg2, String operation) {
         switch (operation) {
@@ -51,16 +55,16 @@ public class Task2 {
         System.out.println("Введите размер массива: ");
         int size = in.nextInt();
         Scanner sc = new Scanner(System.in);
-        System.out.println("Введите слова: ");
-        String str = sc.nextLine();
         String[] words = new String[size];
         int maxlength = 0;
         for (int i = 0; i < words.length; i++) {
+            System.out.printf("Введите слово № %d: %n", i + 1);
+            words[i] = sc.nextLine();   // здесь слово сохраняется в массиве и следом с помощью условия ищется индекс слова наибольшей длины
             if (words.length > words[maxlength].length()) {
                 maxlength = i;
             }
-
         }
+        sc.close();
         return maxlength;
     }
 }
