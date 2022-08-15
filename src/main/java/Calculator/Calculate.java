@@ -1,38 +1,45 @@
 package Calculator;
 
-public class Calculate extends ChooseOperation {
-    @Override
-    public void setArg1(float arg1) {
-        super.setArg1(arg1);
+public  class Calculate {
+    private float arg1;
+    private float arg2;
+    private String operation;
+
+    public Calculate (float arg1, float arg2, String operation) {
+        this.arg1 = arg1;
+        this.arg2 = arg2;
+        this.operation = operation;
     }
 
-    @Override
-    public void setArg2(float arg2) {
-        super.setArg2(arg2);
-    }
-
-    @Override
-    public void setOperation(String operation) {
-        super.setOperation(operation);
+    public Calculate() {
 
     }
 
-    @Override
     public float getArg1() {
-        return super.getArg1();
+        return arg1;
     }
 
-    @Override
+    public void setArg1(float arg1) {
+        this.arg1 = arg1;
+    }
+
     public float getArg2() {
-        return super.getArg2();
+        return arg2;
     }
 
-    @Override
+    public void setArg2(float arg2) {
+        this.arg2 = arg2;
+    }
+
     public String getOperation() {
-        return super.getOperation();
+        return operation;
     }
 
-    public static float Calculate(float arg1, float arg2, String operation) {
+    public void setOperation(String operation) {
+        this.operation = operation;
+    }
+
+    public  float calculate() {
         switch (operation) {
             case "+":
                 return (float) (arg1 + arg2);
@@ -40,11 +47,6 @@ public class Calculate extends ChooseOperation {
                 return (float) (arg1 - arg2);
             default:
                 throw new UnsupportedOperationException("Не корректная операция, Введите +,-,/,*");
-
         }
     }
-
-
 }
-
-

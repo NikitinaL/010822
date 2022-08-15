@@ -1,6 +1,6 @@
 package Calculator;
 
-public class PrintResult extends Calculate {
+public  class PrintResult extends Calculate {
 
     @Override
     public float getArg1() {
@@ -39,10 +39,11 @@ public class PrintResult extends Calculate {
         float arg1 = 0;
         float arg2 = 0;
         int operation=0;
-        System.out.printf(String.format("Итого "+"%.4f%n",Calculate.Calculate(arg1,arg2, String.valueOf(operation))));
+        //System.out.printf(String.format("Итого "+"%.4f%n",Calculate.calculate(arg1,arg2, String.valueOf(operation))));
     }
 
     public PrintResult() {
+        super();
 
     }
 }
