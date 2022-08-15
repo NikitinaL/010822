@@ -45,6 +45,10 @@ public  class Calculate {
                 return (float) (arg1 + arg2);
             case "-":
                 return (float) (arg1 - arg2);
+            case "*":
+                return (float) (arg1 * arg2);
+            case "/":
+                return (float) (arg1 / arg2);
             default:
                 throw new UnsupportedOperationException("Не корректная операция, Введите +,-,/,*");
         }

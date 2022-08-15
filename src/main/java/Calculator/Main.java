@@ -19,11 +19,8 @@ public class Main {
         calculate.setOperation(operation);
         float result = calculate.calculate();
         System.out.println(result);
+        in.close();
+        sc.close();
 
-        Calculate calculate2 = new Calculate();
-        calculate2.setArg1(5);
-        calculate2.setArg2(10);
-        calculate2.setOperation(operation);
-        System.out.println(calculate2.calculate());
     }
 }
