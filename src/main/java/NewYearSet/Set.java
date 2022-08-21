@@ -27,7 +27,7 @@ public abstract class Set {
         this.setName = setName;
     }
 
-    public int getPrice(int price) {
+    public int getPrice() {
         return price;
     }
 
@@ -37,13 +37,11 @@ public abstract class Set {
 
     @Override
     public String toString() {
-        return "Set{" +
-                "brand='" + brand + '\'' +
-                ", setName='" + setName + '\'' +
-                ", price=" + price +
-                '}';
+        return  setName +  " цена " + price;
     }
 
-
+    public float getWeight() {
+        return 0;
+    }
 }
 

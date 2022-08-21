@@ -7,7 +7,7 @@ public class Candys extends Set{
         this.weight=weight;
     }
 
-    public int getWeight() {
+    public float getWeight() {
         return weight;
     }
 
@@ -17,9 +17,7 @@ public class Candys extends Set{
 
     @Override
     public String toString() {
-        return "Candys{" +
-                "weight='" + weight + '\'' +
-                '}';
+        return "Конфеты   [" + super.toString()+ ",  вес= "+ weight+"]";
     }
 }
 
