@@ -3,8 +3,8 @@ package Calculator;
 import java.math.BigDecimal;
 
 public  class Calculate {
-    public float arg1;
-    public float arg2;
+    public Float arg1;
+    public Float arg2;
     public String operation;
 
     public  Calculate (float arg1, float arg2, String operation) {
@@ -44,6 +44,9 @@ public  class Calculate {
 
     public  float calculation() {
         float result = 0;
+        if(arg1==null || arg2==null){
+            throw new UnsupportedOperationException("Введите число!!!!");
+        }
         switch (operation) {
             case "+":
                 result= (arg1 + arg2);

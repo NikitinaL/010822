@@ -108,10 +108,12 @@ class CalculateTest {
     }
 
     @org.junit.jupiter.api.Test
-    void testException() throws Exception {
-        Exception exception = Assertions.assertThrows(InputMismatchException.class,()->{
-
-        });
-        Assertions.assertEquals("Введите число",exception.getMessage());
+    void testException() {
+        Calculate calculate = new Calculate ();
+        calculate.setArg1(3.5f);
+        calculate.setOperation("*");
+        Assertions.assertThrows(UnsupportedOperationException.class,() -> calculate.calculation());
+        UnsupportedOperationException exception = Assertions.assertThrows(UnsupportedOperationException.class,() -> calculate.calculation());
+        Assertions.assertTrue(exception.getMessage().contains("Введите число!!!!"));
     }
 }
