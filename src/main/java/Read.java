@@ -23,22 +23,27 @@ public class Read {
             if (!map.containsKey(words[i])) {
                 map.put(words[i], 1);
             } else {
-                map.put(words[i], map.get(words[i])+1);
+                map.put(words[i], map.get(words[i]) + 1);
             }
+
         }
+        System.out.println(map);
+        System.out.println(set);
+
+        //Найти слово с максимальным количеством повторений
+        //Вывести на консоль это слово и сколько раз оно встречается в файле
         int maxValue = Integer.MIN_VALUE;
         for (int value : map.values()) {
+            set.add(words[value]);
             if (value > maxValue) {
                 maxValue = value;
+                map.put(words[value], 1);
+                map.get(words[value]);
+                System.out.println(words[value] + maxValue);
             }
         }
 
-        //Вывести статистику на консоль
-        System.out.println(set);
-        System.out.println(map);
-        System.out.println(maxValue);
 
     }
 
-    //Вывести на консоль это слово и сколько раз оно встречается в файле
 }

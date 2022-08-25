@@ -35,11 +35,8 @@ public class Main {
             return;
         }
 
-
-
         in.close();
         sc.close();
-
 
     }
 

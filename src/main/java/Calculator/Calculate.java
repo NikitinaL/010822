@@ -1,14 +1,11 @@
 package Calculator;
 
 import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.text.DecimalFormat;
 
 public  class Calculate {
     public float arg1;
     public float arg2;
     public String operation;
-
 
     public  Calculate (float arg1, float arg2, String operation) {
         this.arg1 = arg1;
@@ -17,11 +14,9 @@ public  class Calculate {
 
     }
 
-
     public Calculate() {
 
     }
-
 
     public float getArg1() {
         return arg1;
