@@ -1,36 +1,41 @@
+import java.util.Arrays;
 import java.util.Random;
 
 public class Task3 {
     public static void main(String[] args) {
-        Integer [] arr = new Integer[20];
+        int[] arr = new int[20];
         Random random = new Random();
         for (int i = 0; i < arr.length; i++) {
             arr[i] = ((int) (Math.random() * 20) - 10);
-            System.out.println(arr[i]);
-        }
-        getMaxMin(arr);
-    }
 
-    private static void getMaxMin(Integer[] arr) {
-        int minIndex = 0;
+        }
+        System.out.println(Arrays.toString(arr));
+        int max = 0;
+        int min = 0;
         int maxIndex = 0;
+        int minIndex = 0;
 
-        for (int i = 1; i < arr.length; i++) {
-            if (arr[i - 1] < arr[i] && arr[i - 1] >= 0) {
-                maxIndex = i - 1;
+        for (int i = 1; i < 20; i++) {
+            if (arr[i] < 0 && (arr[i] > max || max == 0)) {
+                max = arr[i];
+                maxIndex = i;
             }
-            if (arr[i - 1] > arr[i] && arr[i - 1] < 0) {
-                minIndex = i - 1;
+            if (arr[i] > 0 && (arr[i] < min || min == 0)) {
+                min = arr[i];
+                minIndex = i;
             }
+
         }
-
-        int max = arr[maxIndex];
-        int min = arr[minIndex];
         arr[maxIndex] = min;
         arr[minIndex] = max;
-        System.out.println("Максимум: " + min + "\nМинимум: " + max);
+
+
+        System.out.println(Arrays.toString(arr));
+        System.out.println("Максимум: " + max + "\nМинимум: " + min);
     }
+
 }
+
 
 
 
