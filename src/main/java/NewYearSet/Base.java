@@ -16,6 +16,7 @@ public class Base {
             }
         System.out.println(totalPrice);
         System.out.println(totalWeight);
+
         }
     }
 

@@ -33,16 +33,14 @@ public class Read {
         //Найти слово с максимальным количеством повторений
         //Вывести на консоль это слово и сколько раз оно встречается в файле
         int maxValue = Integer.MIN_VALUE;
-        for (int value : map.values()) {
-            set.add(words[value]);
-            if (value > maxValue) {
-                maxValue = value;
-                map.put(words[value], 1);
-                map.get(words[value]);
-                System.out.println(words[value] + maxValue);
+        String maxWord = null;
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            if (entry.getValue() > maxValue) {
+                maxValue = entry.getValue();
+                maxWord = entry.getKey();
             }
         }
-
+        System.out.println(maxValue + maxWord);
 
     }
 
